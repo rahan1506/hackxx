@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Start Simulation — CareerSim</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><h2>CareerSim</h2></div>
+    <div class="nav-links"><a href="index.html">Home</a></div>
+  </nav>
+
+  <main>
+    <section class="simulator">
+      <div class="section-panel">
+        <div class="section-header">
+          <h2>Begin Your Simulation</h2>
+          <p>Choose a role, your education and experience to preview long-term outcomes.</p>
+        </div>
+
+        <form id="careerForm">
+          <select id="career">
+            <option value="">Select Career</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Data Science">Data Science</option>
+          </select>
+
+          <select id="education">
+            <option value="">Education</option>
+            <option value="diploma">Diploma</option>
+            <option value="ug">Undergraduate</option>
+            <option value="pg">Postgraduate</option>
+          </select>
+
+          <input type="number" id="experience" placeholder="Years of experience" />
+
+          <button type="submit">Simulate</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

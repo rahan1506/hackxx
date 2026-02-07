@@ -1,0 +1,21 @@
+{
+  "Web Development": {
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Backend Basics"],
+    "roles": {
+      "junior": "Junior Web Developer",
+      "mid": "Full Stack Developer",
+      "senior": "Tech Lead / Architect"
+    },
+    "risk": "Technology changes fast. Continuous learning is required."
+  },
+
+  "Data Science": {
+    "skills": ["Python", "Statistics", "Machine Learning", "SQL"],
+    "roles": {
+      "junior": "Data Analyst",
+      "mid": "Data Scientist",
+      "senior": "AI/ML Specialist"
+    },
+    "risk": "Strong math and domain knowledge are essential."
+  }
+}

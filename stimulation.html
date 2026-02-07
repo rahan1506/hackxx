@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Career Simulation Result</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="logo"><h2>CareerSim</h2></div>
+		<div class="nav-links">
+			<a href="index.html">Home</a>
+			<a href="form.html">Start</a>
+		</div>
+	</nav>
+
+	<main>
+		<section class="section-panel" style="max-width:900px;">
+			<div class="section-header">
+				<h2>Simulation Result</h2>
+				<p>Overview of predicted role, readiness, skill gaps and a short roadmap.</p>
+			</div>
+
+			<div id="output"></div>
+
+			<div id="readinessWrap" style="margin-top:12px; text-align:left;">
+				<label for="readiness" style="color:#fff; font-weight:600; display:block; margin-bottom:8px;">Readiness</label>
+				<progress id="readiness" max="100" value="0"></progress>
+			</div>
+
+			<div id="skillsOutput" style="margin-top:18px;"></div>
+
+			<div id="roadmapOutput" style="margin-top:18px;"></div>
+		</section>
+	</main>
+
+	<script src="js/logic.js"></script>
+</body>
+</html>

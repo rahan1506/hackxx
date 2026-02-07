@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CareerSim</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+
+  <!-- Navbar -->
+  <nav class="navbar">
+  <div class="logo">
+    <h2>CareerSim</h2>
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="form.html">Start</a>
+  </div>
+</nav>
+<section class="hero">
+  <h1>Campus to Corporate</h1>
+  <span class="tagline">Simulating careers before you choose them</span>
+
+  <p>Bridging students from classrooms to real-world careers</p>
+  <button>Explore Path</button>
+</section>
+
+
+
+  <!-- Career Trajectory Preview -->
+  <section class="trajectory">
+    <div class="section-panel">
+      <div class="section-header">
+        <h2>Your Career Trajectory</h2>
+        <p>See how today’s choices shape your future — from campus to corporate life.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Year 1</h3>
+          <p>Skill building, internships, certifications</p>
+        </div>
+
+        <div class="card">
+          <h3>Year 3</h3>
+          <p>Role specialization, projects, networking</p>
+        </div>
+
+        <div class="card">
+          <h3>Year 5</h3>
+          <p>Career growth, salary jump, leadership roles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Career Simulator -->
+<section class="simulator">
+  <div class="section-panel">
+    <div class="section-header">
+      <h2>Simulate Your Career</h2>
+      <p>Enter your details and preview your future career path</p>
+    </div>
+
+    <div class="simulator-box">
+      <input type="text" id="skill" placeholder="Your main skill (e.g., Web Dev)">
+      <select id="education">
+        <option value="">Education Level</option>
+        <option value="diploma">Diploma</option>
+        <option value="ug">Undergraduate</option>
+        <option value="pg">Postgraduate</option>
+      </select>
+
+      <select id="experience">
+        <option value="">Experience</option>
+        <option value="0">0–1 years</option>
+        <option value="2">2–3 years</option>
+        <option value="4">4+ years</option>
+      </select>
+
+      <button onclick="simulateCareer()">Simulate</button>
+    </div>
+
+    <div id="result" class="result"></div>
+  </div>
+</section>
+<!-- Why This Matters -->
+<section class="impact">
+  <div class="section-panel">
+    <div class="section-header">
+      <h2>Why This Matters</h2>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <h3>🚨 The Problem</h3>
+        <p>Students make career decisions without understanding long-term outcomes, leading to mismatched roles, slow growth, and dissatisfaction.</p>
+      </div>
+
+      <div class="impact-card">
+        <h3>💡 Our Solution</h3>
+        <p>We simulate future career trajectories and risks, helping students make informed decisions before entering the corporate world.</p>
+      </div>
+
+      <div class="impact-card">
+        <h3>🌍 The Impact</h3>
+        <p>Better decisions today lead to confident professionals, faster growth, and reduced career uncertainty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Future Scope -->
+<section class="future">
+  <div class="section-panel">
+    <div class="section-header">
+      <h2>Future Scope</h2>
+    </div>
+
+    <ul class="future-list">
+      <li>AI/ML-based career prediction using real-world datasets</li>
+      <li>Personalized learning and upskilling roadmaps</li>
+      <li>Integration with LinkedIn, Coursera, and job portals</li>
+      <li>Corporate mentorship and internship matching</li>
+      <li>Real-time labor market trend analysis</li>
+    </ul>
+  </div>
+</section>
+<!-- Team Section -->
+<section class="team">
+  <div class="section-panel">
+    <div class="section-header">
+      <h2>Team Tech Dudes</h2>
+      <p>Building the bridge from Career to Corporate</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="member">Member 1</div>
+      <div class="member">Member 2</div>
+      <div class="member">Member 3</div>
+      <div class="member">Member 4</div>
+    </div>
+  </div>
+</section>
+
+
+<script src="js/script.js"></script>
+
+
+
+</body>
+</html>
