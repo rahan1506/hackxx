@@ -1,153 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CareerSim</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerSim - Career Simulator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    
-
-  <!-- Navbar -->
-  <nav class="navbar">
-  <div class="logo">
-    <h2>CareerSim</h2>
-  </div>
-
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="form.html">Start</a>
-  </div>
-</nav>
-<section class="hero">
-  <h1>Campus to Corporate</h1>
-  <span class="tagline">Simulating careers before you choose them</span>
-
-  <p>Bridging students from classrooms to real-world careers</p>
-  <button>Explore Path</button>
-</section>
-
-
-
-  <!-- Career Trajectory Preview -->
-  <section class="trajectory">
-    <div class="section-panel">
-      <div class="section-header">
-        <h2>Your Career Trajectory</h2>
-        <p>See how today’s choices shape your future — from campus to corporate life.</p>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Year 1</h3>
-          <p>Skill building, internships, certifications</p>
+<body class="dark-theme">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>CareerSim</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="form.html">Start Simulation</a>
+                <a href="#features">Features</a>
+                <a href="#team">Team</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+    </nav>
 
-        <div class="card">
-          <h3>Year 3</h3>
-          <p>Role specialization, projects, networking</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Campus to Corporate</h1>
+            <p class="hero-subtitle">Simulating careers before you choose them</p>
+            <p class="hero-description">Bridge the gap between your education and your dream career</p>
+            <a href="form.html" class="btn btn-primary">
+                <span>Start Your Journey</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
-
-        <div class="card">
-          <h3>Year 5</h3>
-          <p>Career growth, salary jump, leadership roles</p>
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-<!-- Career Simulator -->
-<section class="simulator">
-  <div class="section-panel">
-    <div class="section-header">
-      <h2>Simulate Your Career</h2>
-      <p>Enter your details and preview your future career path</p>
-    </div>
+    <!-- Career Trajectory Section -->
+    <section class="trajectory">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Career Trajectory</h2>
+                <p>See how today's choices shape your future</p>
+            </div>
+            <div class="trajectory-grid">
+                <div class="trajectory-card">
+                    <div class="card-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Year 1</h3>
+                    <p>Foundation Building</p>
+                    <ul>
+                        <li>Skill development</li>
+                        <li>Internships</li>
+                        <li>Certifications</li>
+                    </ul>
+                </div>
+                <div class="trajectory-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Year 3</h3>
+                    <p>Growth Phase</p>
+                    <ul>
+                        <li>Role specialization</li>
+                        <li>Project leadership</li>
+                        <li>Networking</li>
+                    </ul>
+                </div>
+                <div class="trajectory-card">
+                    <div class="card-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Year 5+</h3>
+                    <p>Leadership</p>
+                    <ul>
+                        <li>Career advancement</li>
+                        <li>Salary growth</li>
+                        <li>Senior roles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="simulator-box">
-      <input type="text" id="skill" placeholder="Your main skill (e.g., Web Dev)">
-      <select id="education">
-        <option value="">Education Level</option>
-        <option value="diploma">Diploma</option>
-        <option value="ug">Undergraduate</option>
-        <option value="pg">Postgraduate</option>
-      </select>
+    <!-- Simulator Section -->
+    <section class="simulator" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Career Simulator</h2>
+                <p>Predict your career path based on your profile</p>
+            </div>
+            <div class="simulator-wrapper">
+                <div class="simulator-box">
+                    <form id="careerForm">
+                        <div class="form-group">
+                            <label for="skill">Main Skill</label>
+                            <input type="text" id="skill" placeholder="e.g., Web Development, Data Science, UX Design" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="education">Education Level</label>
+                                <select id="education" required>
+                                    <option value="">Select...</option>
+                                    <option value="diploma">Diploma</option>
+                                    <option value="ug">Undergraduate</option>
+                                    <option value="pg">Postgraduate</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="experience">Experience</label>
+                                <select id="experience" required>
+                                    <option value="">Select...</option>
+                                    <option value="0">0–1 years</option>
+                                    <option value="2">2–3 years</option>
+                                    <option value="4">4+ years</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" onclick="simulateCareer()" class="btn btn-primary btn-block">
+                            <span>Simulate Career</span>
+                            <i class="fas fa-magic"></i>
+                        </button>
+                    </form>
+                </div>
+                <div id="result" class="result-container"></div>
+            </div>
+        </div>
+    </section>
 
-      <select id="experience">
-        <option value="">Experience</option>
-        <option value="0">0–1 years</option>
-        <option value="2">2–3 years</option>
-        <option value="4">4+ years</option>
-      </select>
+    <!-- Impact Section -->
+    <section class="impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why This Matters</h2>
+                <p>Understanding the real impact of career decisions</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <h3>The Problem</h3>
+                    <p>Students make career decisions without understanding long-term outcomes, leading to mismatched roles, slow growth, and dissatisfaction.</p>
+                </div>
+                <div class="impact-card highlight">
+                    <div class="impact-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Our Solution</h3>
+                    <p>We simulate future career trajectories and risks, helping students make informed decisions before entering the corporate world.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>The Impact</h3>
+                    <p>Better decisions today lead to confident professionals, faster growth, and reduced career uncertainty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <button onclick="simulateCareer()">Simulate</button>
-    </div>
+    <!-- Future Scope Section -->
+    <section class="future">
+        <div class="container">
+            <div class="section-header">
+                <h2>Future Roadmap</h2>
+                <p>What's coming next</p>
+            </div>
+            <div class="roadmap">
+                <div class="roadmap-item">
+                    <div class="roadmap-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>AI/ML Integration</h4>
+                    <p>Real-world data-driven predictions</p>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Learning Paths</h4>
+                    <p>Personalized upskilling roadmaps</p>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h4>Integrations</h4>
+                    <p>LinkedIn, Coursera, job portals</p>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Mentorship</h4>
+                    <p>Corporate mentorship matching</p>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4>Market Analysis</h4>
+                    <p>Real-time labor trends</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div id="result" class="result"></div>
-  </div>
-</section>
-<!-- Why This Matters -->
-<section class="impact">
-  <div class="section-panel">
-    <div class="section-header">
-      <h2>Why This Matters</h2>
-    </div>
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Team</h2>
+                <p>Building the bridge from campus to corporate</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Team Member 1</h3>
+                    <p>Full Stack Developer</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Team Member 2</h3>
+                    <p>UI/UX Designer</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Team Member 3</h3>
+                    <p>Backend Engineer</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Team Member 4</h3>
+                    <p>Product Manager</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="impact-grid">
-      <div class="impact-card">
-        <h3>🚨 The Problem</h3>
-        <p>Students make career decisions without understanding long-term outcomes, leading to mismatched roles, slow growth, and dissatisfaction.</p>
-      </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CareerSim</h4>
+                    <p>Simulating careers before you choose them</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="form.html">Simulator</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CareerSim. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-      <div class="impact-card">
-        <h3>💡 Our Solution</h3>
-        <p>We simulate future career trajectories and risks, helping students make informed decisions before entering the corporate world.</p>
-      </div>
-
-      <div class="impact-card">
-        <h3>🌍 The Impact</h3>
-        <p>Better decisions today lead to confident professionals, faster growth, and reduced career uncertainty.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Future Scope -->
-<section class="future">
-  <div class="section-panel">
-    <div class="section-header">
-      <h2>Future Scope</h2>
-    </div>
-
-    <ul class="future-list">
-      <li>AI/ML-based career prediction using real-world datasets</li>
-      <li>Personalized learning and upskilling roadmaps</li>
-      <li>Integration with LinkedIn, Coursera, and job portals</li>
-      <li>Corporate mentorship and internship matching</li>
-      <li>Real-time labor market trend analysis</li>
-    </ul>
-  </div>
-</section>
-<!-- Team Section -->
-<section class="team">
-  <div class="section-panel">
-    <div class="section-header">
-      <h2>Team Tech Dudes</h2>
-      <p>Building the bridge from Career to Corporate</p>
-    </div>
-
-    <div class="team-grid">
-      <div class="member">Member 1</div>
-      <div class="member">Member 2</div>
-      <div class="member">Member 3</div>
-      <div class="member">Member 4</div>
-    </div>
-  </div>
-</section>
-
-
-<script src="js/script.js"></script>
-
-
-
+    <script src="js/script.js"></script>
 </body>
 </html>
